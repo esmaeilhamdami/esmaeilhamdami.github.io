@@ -1,0 +1,35 @@
+{
+  "sign in | sign up": "ورود | ثبت نام",
+  "phone number": "شماره تلفن",
+  "create user account": "ایجاد حساب کاربری",
+  "reset password": "بازنشانی گذرواژه",
+  "enter": "ورود به برنامه",
+  "Username or email": "نام کاربری یا ایمیل",
+  "* Phone number": "* شماره تلفن",
+  "* Name": "* نام",
+  "* Last name": "* نام خانوادگی",
+  "Forgot your password? Please enter your username or email address. You will receive a link to create a new password via email.": "رمز عبور خود را فراموش کرده اید؟ لطفا نام کاربری یا آدرس ایمیل خود را وارد کنید. لینکی برای ایجاد رمز عبور جدید از طریق ایمیل دریافت کرد.",
+
+  "Restaurant and Cafe": "رستوران و کافه",
+  "Supermarket and Dairy": "سوپر مارکت و لبنیات",
+  "Bakery": "نانوایی",
+  "Juice and Ice Cream": "آبمیوه بستنی",
+  "Fruits and Vegetables": "میوه و سبزی",
+  "Sweets and Nuts": "شیرینی و آجیل",
+  "Household Products and Spice": "محصولات خانگی و عطاری",
+  "Meat and Protein": "گوشت و پروتئین",
+  "Flower and Plant": "گل و گیاه",
+  "Pet Shop": "پت شاپ",
+  "Health and Beauty": "سلامت و زیبایی",
+
+  "home": "خانه",
+  "favorite": "علاقه مندی",
+  "orders": "سفارش ها",
+  "shopping cart": "سبد خرید",
+
+  "category": "دسته بندی",
+  "search in vurall": "جستجو در وورآل",
+
+  "Didn't receive a code? Please check your email or mobile number and if you don't receive one, you can request a resend of the code.": "آیا کد دریافت نکرده\u200Cاید؟ لطفاً شماره موبایل خود را بررسی کنید و در صورت عدم دریافت، می\u200Cتوانید درخواست ارسال مجدد کد را ثبت کنید.",
+  "Resend the code": "ارسال مجدد کد"
+}

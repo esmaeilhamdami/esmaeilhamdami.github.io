@@ -1,6 +1,6 @@
 {
-    "name": "web_version_control",
-    "short_name": "web_version_control",
+    "name": "vurall",
+    "short_name": "vurall",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
