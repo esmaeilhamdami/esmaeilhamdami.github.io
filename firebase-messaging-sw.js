@@ -12,7 +12,7 @@ firebase.initializeApp({
 });
 
 const messaging = firebase.messaging();
-const channel = new BroadcastChannel('fcm_background_channel');
+//const channel = new BroadcastChannel('fcm_background_channel');
 
 // Optional: show notification when app is in background
 messaging.onBackgroundMessage((payload) => {
@@ -25,6 +25,6 @@ messaging.onBackgroundMessage((payload) => {
 
 //  self.registration.showNotification(notificationTitle, notificationOptions);
 
-  channel.postMessage(payload);
+//  channel.postMessage(payload);
 
 });

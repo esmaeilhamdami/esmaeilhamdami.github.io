@@ -1,23 +1,37 @@
 <!DOCTYPE html>
+
 <html lang="fa">
 <head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
   <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="جایی که هر طعمی داستانی را بیان می کند">
-  <!--  <meta name="referer" content="no-referer">  -->
+  <meta name="description" content="A new Flutter project.">
+
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="vurall">
+  <meta name="apple-mobile-web-app-title" content="vurall_vendor">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
   <link rel="stylesheet" href="styles/loader.css" />
 
-  <title>VurAll | وورآل</title>
+  <title>vurall_vendor</title>
   <link rel="manifest" href="manifest.json">
 </head>
 <body id="application-body" class="bodyBase">
@@ -29,26 +43,6 @@
     <div style="--i: 4"></div>
   </div>
 </div>
-
-<!--<script>-->
-<!--&lt;!&ndash;  // ابتدا مطمئن شوید که کتابخانه‌های Firebase بارگذاری شده‌اند&ndash;&gt;-->
-<!--&lt;!&ndash;  // (اگر قبلاً این اسکریپت‌ها را در بالا ندارید، اضافه کنید)&ndash;&gt;-->
-<!--&lt;!&ndash;  importScripts('https://www.gstatic.com/firebasejs/11.7.1/firebase-app-compat.js');&ndash;&gt;-->
-<!--&lt;!&ndash;  importScripts('https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging-compat.js');&ndash;&gt;-->
-
-<!--&lt;!&ndash;  // مقداردهی اولیه‌ی Firebase&ndash;&gt;-->
-<!--&lt;!&ndash;  firebase.initializeApp({&ndash;&gt;-->
-<!--&lt;!&ndash;    apiKey: "AIzaSyD_e6AFrzFLauJ_Z1NMlF1xE0byIWe3ds",&ndash;&gt;-->
-<!--&lt;!&ndash;    authDomain: "vurall-app.firebaseapp.com",&ndash;&gt;-->
-<!--&lt;!&ndash;    projectId: "vurall-app",&ndash;&gt;-->
-<!--&lt;!&ndash;    storageBucket: "vurall-app.firebasestorage.app",&ndash;&gt;-->
-<!--&lt;!&ndash;    messagingSenderId: "416792177745",&ndash;&gt;-->
-<!--&lt;!&ndash;    appId: "1:416792177745:web:3a66805cc6f4d5f7a61c70",&ndash;&gt;-->
-<!--&lt;!&ndash;    measurementId: "G-7HJCTG2XK1"&ndash;&gt;-->
-<!--&lt;!&ndash;  });&ndash;&gt;-->
-<!--</script>-->
-
-
 <script>
   if ('serviceWorker' in navigator && firebase.messaging) {
     window.addEventListener('load', async () => {
@@ -98,7 +92,7 @@ _flutter.buildConfig = {"engineRevision":"18b71d647a292a980abb405ac7d16fe1f0b204
   _flutter.loader.load({
     config: userConfig,
     serviceWorkerSettings: {
-      serviceWorkerVersion: "4076661167",
+      serviceWorkerVersion: "833834308",
     },
     onEntrypointLoaded: async function(engineInitializer) {
       const appRunner = await engineInitializer.initializeEngine();
