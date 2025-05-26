@@ -12,15 +12,19 @@ firebase.initializeApp({
 });
 
 const messaging = firebase.messaging();
+const channel = new BroadcastChannel('fcm_background_channel');
 
 // Optional: show notification when app is in background
 messaging.onBackgroundMessage((payload) => {
   console.log('[firebase-messaging-sw.js] Received background message ', payload);
-  const notificationTitle = payload.notification.title;
-  const notificationOptions = {
-    body: payload.notification.body,
-    //icon: '/icons/Icon-192.png'
-  };
+//  const notificationTitle = payload.notification.title;
+//  const notificationOptions = {
+//    body: payload.notification.body,
+//    //icon: '/icons/Icon-192.png'
+//  };
 
-  self.registration.showNotification(notificationTitle, notificationOptions);
+//  self.registration.showNotification(notificationTitle, notificationOptions);
+
+  channel.postMessage(payload);
+
 });

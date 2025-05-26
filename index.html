@@ -30,23 +30,24 @@
   </div>
 </div>
 
-<script>
-  // ابتدا مطمئن شوید که کتابخانه‌های Firebase بارگذاری شده‌اند
-  // (اگر قبلاً این اسکریپت‌ها را در بالا ندارید، اضافه کنید)
-  importScripts('https://www.gstatic.com/firebasejs/11.7.1/firebase-app-compat.js');
-  importScripts('https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging-compat.js');
+<!--<script>-->
+<!--&lt;!&ndash;  // ابتدا مطمئن شوید که کتابخانه‌های Firebase بارگذاری شده‌اند&ndash;&gt;-->
+<!--&lt;!&ndash;  // (اگر قبلاً این اسکریپت‌ها را در بالا ندارید، اضافه کنید)&ndash;&gt;-->
+<!--&lt;!&ndash;  importScripts('https://www.gstatic.com/firebasejs/11.7.1/firebase-app-compat.js');&ndash;&gt;-->
+<!--&lt;!&ndash;  importScripts('https://www.gstatic.com/firebasejs/11.7.1/firebase-messaging-compat.js');&ndash;&gt;-->
 
-  // مقداردهی اولیه‌ی Firebase
-  firebase.initializeApp({
-    apiKey: "AIzaSyD_e6AFrzFLauJ_Z1NMlF1xE0byIWe3ds",
-    authDomain: "vurall-app.firebaseapp.com",
-    projectId: "vurall-app",
-    storageBucket: "vurall-app.firebasestorage.app",
-    messagingSenderId: "416792177745",
-    appId: "1:416792177745:web:3a66805cc6f4d5f7a61c70",
-    measurementId: "G-7HJCTG2XK1"
-  });
-</script>
+<!--&lt;!&ndash;  // مقداردهی اولیه‌ی Firebase&ndash;&gt;-->
+<!--&lt;!&ndash;  firebase.initializeApp({&ndash;&gt;-->
+<!--&lt;!&ndash;    apiKey: "AIzaSyD_e6AFrzFLauJ_Z1NMlF1xE0byIWe3ds",&ndash;&gt;-->
+<!--&lt;!&ndash;    authDomain: "vurall-app.firebaseapp.com",&ndash;&gt;-->
+<!--&lt;!&ndash;    projectId: "vurall-app",&ndash;&gt;-->
+<!--&lt;!&ndash;    storageBucket: "vurall-app.firebasestorage.app",&ndash;&gt;-->
+<!--&lt;!&ndash;    messagingSenderId: "416792177745",&ndash;&gt;-->
+<!--&lt;!&ndash;    appId: "1:416792177745:web:3a66805cc6f4d5f7a61c70",&ndash;&gt;-->
+<!--&lt;!&ndash;    measurementId: "G-7HJCTG2XK1"&ndash;&gt;-->
+<!--&lt;!&ndash;  });&ndash;&gt;-->
+<!--</script>-->
+
 
 <script>
   if ('serviceWorker' in navigator && firebase.messaging) {
@@ -66,6 +67,15 @@
   }
 </script>
 
+<!--<script>-->
+<!--  const channel = new BroadcastChannel('fcm_background_channel');-->
+<!--  channel.onmessage = (event) => {-->
+<!--    console.log('📦 پیام از ServiceWorker به JS اصلی:', event.data);-->
+<!--    window.dispatchEvent(new CustomEvent('fcm-background-message', {-->
+<!--      detail: event.data-->
+<!--    }));-->
+<!--  };-->
+<!--</script>-->
 <script async>
   (()=>{var P=()=>navigator.vendor==="Google Inc."||navigator.agent==="Edg/",E=()=>typeof ImageDecoder>"u"?!1:P(),L=()=>typeof Intl.v8BreakIterator<"u"&&typeof Intl.Segmenter<"u",W=()=>{let n=[0,97,115,109,1,0,0,0,1,5,1,95,1,120,0];return WebAssembly.validate(new Uint8Array(n))},w={hasImageCodecs:E(),hasChromiumBreakIterators:L(),supportsWasmGC:W(),crossOriginIsolated:window.crossOriginIsolated};function l(...n){return new URL(C(...n),document.baseURI).toString()}function C(...n){return n.filter(t=>!!t).map((t,i)=>i===0?_(t):j(_(t))).filter(t=>t.length).join("/")}function j(n){let t=0;for(;t<n.length&&n.charAt(t)==="/";)t++;return n.substring(t)}function _(n){let t=n.length;for(;t>0&&n.charAt(t-1)==="/";)t--;return n.substring(0,t)}function T(n,t){return n.canvasKitBaseUrl?n.canvasKitBaseUrl:t.engineRevision&&!t.useLocalCanvasKit?C("https://www.gstatic.com/flutter-canvaskit",t.engineRevision):"canvaskit"}var v=class{constructor(){this._scriptLoaded=!1}setTrustedTypesPolicy(t){this._ttPolicy=t}async loadEntrypoint(t){let{entrypointUrl:i=l("main.dart.js"),onEntrypointLoaded:r,nonce:e}=t||{};return this._loadJSEntrypoint(i,r,e)}async load(t,i,r,e,a){a??=o=>{o.initializeEngine(r).then(c=>c.runApp())};let{entryPointBaseUrl:s}=r;if(t.compileTarget==="dart2wasm")return this._loadWasmEntrypoint(t,i,s,a);{let o=t.mainJsPath??"main.dart.js",c=l(s,o);return this._loadJSEntrypoint(c,a,e)}}didCreateEngineInitializer(t){typeof this._didCreateEngineInitializerResolve=="function"&&(this._didCreateEngineInitializerResolve(t),this._didCreateEngineInitializerResolve=null,delete _flutter.loader.didCreateEngineInitializer),typeof this._onEntrypointLoaded=="function"&&this._onEntrypointLoaded(t)}_loadJSEntrypoint(t,i,r){let e=typeof i=="function";if(!this._scriptLoaded){this._scriptLoaded=!0;let a=this._createScriptTag(t,r);if(e)console.debug("Injecting <script> tag. Using callback."),this._onEntrypointLoaded=i,document.head.append(a);else return new Promise((s,o)=>{console.debug("Injecting <script> tag. Using Promises. Use the callback approach instead!"),this._didCreateEngineInitializerResolve=s,a.addEventListener("error",o),document.head.append(a)})}}async _loadWasmEntrypoint(t,i,r,e){if(!this._scriptLoaded){this._scriptLoaded=!0,this._onEntrypointLoaded=e;let{mainWasmPath:a,jsSupportRuntimePath:s}=t,o=l(r,a),c=l(r,s);this._ttPolicy!=null&&(c=this._ttPolicy.createScriptURL(c));let d=(await import(c)).compileStreaming(fetch(o)),f;t.renderer==="skwasm"?f=(async()=>{let m=await i.skwasm;return window._flutter_skwasmInstance=m,{skwasm:m.wasmExports,skwasmWrapper:m,ffi:{memory:m.wasmMemory}}})():f=Promise.resolve({}),await(await(await d).instantiate(await f)).invokeMain()}}_createScriptTag(t,i){let r=document.createElement("script");r.type="application/javascript",i&&(r.nonce=i);let e=t;return this._ttPolicy!=null&&(e=this._ttPolicy.createScriptURL(t)),r.src=e,r}};async function I(n,t,i){if(t<0)return n;let r,e=new Promise((a,s)=>{r=setTimeout(()=>{s(new Error(`${i} took more than ${t}ms to resolve. Moving on.`,{cause:I}))},t)});return Promise.race([n,e]).finally(()=>{clearTimeout(r)})}var y=class{setTrustedTypesPolicy(t){this._ttPolicy=t}loadServiceWorker(t){if(!t)return console.debug("Null serviceWorker configuration. Skipping."),Promise.resolve();if(!("serviceWorker"in navigator)){let o="Service Worker API unavailable.";return window.isSecureContext||(o+=`
 The current context is NOT secure.`,o+=`
@@ -88,7 +98,7 @@ _flutter.buildConfig = {"engineRevision":"18b71d647a292a980abb405ac7d16fe1f0b204
   _flutter.loader.load({
     config: userConfig,
     serviceWorkerSettings: {
-      serviceWorkerVersion: "1052451087",
+      serviceWorkerVersion: "4076661167",
     },
     onEntrypointLoaded: async function(engineInitializer) {
       const appRunner = await engineInitializer.initializeEngine();
