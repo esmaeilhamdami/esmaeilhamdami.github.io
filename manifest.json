@@ -1,6 +1,6 @@
 {
-    "name": "vurall_vendor",
-    "short_name": "vurall_vendor",
+    "name": "vurall_delivery",
+    "short_name": "vurall_delivery",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
